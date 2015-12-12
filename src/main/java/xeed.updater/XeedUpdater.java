@@ -27,7 +27,7 @@ public class XeedUpdater extends javax.swing.JFrame {
         initComponents();
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension screensize = tk.getScreenSize();
-        this.setLocation(screensize.width / 2 - this.getWidth() / 2, screensize.height / 2 - this.getHeight() / 2); //Bra start pos
+        this.setLocation(screensize.width / 2 - this.getWidth() / 2, screensize.height / 2 - this.getHeight() / 2);
     }
 
     public void setProgress(int procent, String msg) {
@@ -62,7 +62,7 @@ public class XeedUpdater extends javax.swing.JFrame {
         lblMsg.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblMsg.setText("Loading...");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xeed.updater/screen.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/screen.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
