@@ -4,11 +4,11 @@
  */
 
 /*
- * xeed_update.java
+ * XeedUpdater.java
  *
  * Created on 2010-dec-12, 20:02:39
  */
-package xeed_updater;
+package xeed.updater;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -21,9 +21,9 @@ import javax.swing.JOptionPane;
  *
  * @author Erik
  */
-public class xeed_update extends javax.swing.JFrame {
+public class XeedUpdater extends javax.swing.JFrame {
 
-    public xeed_update() {
+    public XeedUpdater() {
         initComponents();
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension screensize = tk.getScreenSize();
@@ -62,7 +62,7 @@ public class xeed_update extends javax.swing.JFrame {
         lblMsg.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblMsg.setText("Loading...");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xeed_updater/screen.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xeed.updater/screen.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,10 +95,10 @@ public class xeed_update extends javax.swing.JFrame {
             return;
         }
 
-        xeed_update x = new xeed_update();
+        XeedUpdater x = new XeedUpdater();
         x.setVisible(true);
 
-        engine en = new engine(args[1], x,args[0]);
+        Engine en = new Engine(args[1], x,args[0]);
         Thread tmpThread = new Thread(en);
         tmpThread.start();
 

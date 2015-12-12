@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package xeed_updater;
+package xeed.updater;
 
 import java.io.*;
 import java.net.MalformedURLException;
@@ -15,14 +15,14 @@ import javax.swing.JOptionPane;
  *
  * @author Erik
  */
-public class engine implements Runnable {
+public class Engine implements Runnable {
 
     final String szUpdateURL;
     public String szFile = "";
-    private xeed_update xHandle = null;
+    private XeedUpdater xHandle = null;
     private long lngFileSize = 0;
 
-    public engine(String file, xeed_update x, String url) {
+    public Engine(String file, XeedUpdater x, String url) {
         szFile = file;
         xHandle = x;
         szUpdateURL = url;
@@ -41,7 +41,7 @@ public class engine implements Runnable {
         }
 
         try {
-            Process ps = Runtime.getRuntime().exec(new String[]{"java", "-jar", szFile, "/del_ud:\"" + new File(engine.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getAbsolutePath() + "\""});
+            Process ps = Runtime.getRuntime().exec(new String[]{"java", "-jar", szFile, "/del_ud:\"" + new File(Engine.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getAbsolutePath() + "\""});
         } catch (Exception e) {
         }
         System.exit(0);
