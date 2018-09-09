@@ -1,5 +1,5 @@
 # XEED Updater
-*This is a self-contained update module for the legacy [XEED desktop](https://github.com/ErikGartner/xeed-legacy) application*.
+*This is a self-contained update module for the [XEED desktop](https://github.com/ErikGartner/xeed-legacy) application*.
 
 ## Usage
 This module intended to bundled with XEED as resource and not intended for standalone usage.
